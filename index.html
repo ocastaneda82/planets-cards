@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet's Cards</title>
+    <!-- I use bootrap's grid and I prefer have it local -->
+    <link
+      rel="stylesheet"
+      href="vendors/bootstrap-4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="sources/css/api.css" />
+  </head>
+
+  <body id="top">
+    <div class="container">
+      <!-- I use BEM for writing maintainance CSS http://getbem.com/introduction/ -->
+      <!-- header modulo -->
+      <header class="header">
+        <div class="row">
+          <div class="col">
+            <h1 class="header__title">Planets Cards</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <!-- Search Box -->
+            <form class="search">
+              <div class="search__custom-radio">
+                <h5 class="search__subtitle">Search by</h5>
+                <!-- You can add more inputs here and the js load this in the DOM-->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    data-js="name"
+                    type="radio"
+                    id="radio__name"
+                    name="radio__form"
+                    class="custom-control-input radio__name"
+                    checked
+                  />
+                  <label
+                    class="custom-control-label radio__label"
+                    for="radio__name"
+                    >name</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    data-js="climate"
+                    type="radio"
+                    id="radio__climate"
+                    name="radio__form"
+                    class="custom-control-input radio__climate"
+                  />
+                  <label
+                    class="custom-control-label radio__label"
+                    for="radio__climate"
+                    >climate</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    data-js="gravity"
+                    type="radio"
+                    id="radio__gravity"
+                    name="radio__form"
+                    class="custom-control-input radio__gravity"
+                  />
+                  <label
+                    class="custom-control-label radio__label"
+                    for="radio__gravity"
+                    >gravity</label
+                  >
+                </div>
+                <!-- for example, add: -->
+                <!-- <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    data-js="terrain"
+                    type="radio"
+                    id="radio__terrain"
+                    name="radio__form"
+                    class="custom-control-input radio__terrain"
+                  />
+                  <label
+                    class="custom-control-label radio__label"
+                    for="radio__terrain"
+                    >terrain</label
+                  >
+                </div> -->
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control search__input"
+                  id="text-filter"
+                  aria-describedby="textHelp"
+                  placeholder="Search by name"
+                />
+                <small id="textHelp" class="form-text search__label"
+                  >Please fill it with your term.</small
+                >
+              </div>
+            </form>
+            <!-- Search Box -->
+          </div>
+        </div>
+      </header>
+      <!-- header modulo -->
+      <!-- Planets module -->
+      <main class="planets">
+        <div class="row row-cols-1 row-cols-md-3" data-menu-js>
+          <!-- planet -->
+          <!-- planet -->
+        </div>
+      </main>
+      <!-- Planets -->
+      <footer class="pb-3">
+        <div class="row">
+          <div class="col">
+            <button type="button" class="button__load btn btn-primary">
+              Show more
+            </button>
+          </div>
+          <div class="col text-right">
+            <a href="#top" class="button__gotop btn btn-secondary">
+              Go to top
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="sources/js/api.js"></script>
+</html>
